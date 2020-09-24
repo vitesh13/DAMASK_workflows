@@ -1,0 +1,8 @@
+#!/bin/bash
+git clone https://github.com/eisenforschung/DAMASK.git
+cd DAMASK 
+git checkout -b development
+patch -p1 < ../binder/python.patch
+cd python
+cp ../VERSION .
+pip install . 
