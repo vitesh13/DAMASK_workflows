@@ -2,5 +2,6 @@
 git clone https://github.com/eisenforschung/DAMASK.git
 cd DAMASK 
 git checkout -b development
-cd python 
+cd python
+cp ../VERSION .
 pip install . 
