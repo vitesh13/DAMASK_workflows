@@ -1,0 +1,22 @@
+From e6246060f11fd3d3d609447a3e24d9a6c6a7a68f Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Thu, 24 Sep 2020 10:39:35 +0200
+Subject: [PATCH] Update setup.py
+
+---
+ python/setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/python/setup.py b/python/setup.py
+index ac236316..56e2055d 100644
+--- a/python/setup.py
++++ b/python/setup.py
+@@ -2,7 +2,7 @@
+ from pathlib import Path
+ import re
+ 
+-with open(Path(__file__).parent/'damask/VERSION') as f:
++with open('VERSION') as f:
+   version = re.sub(r'(-([^-]*)).*$',r'.\2',re.sub(r'^v(\d+\.\d+(\.\d+)?)',r'\1',f.readline().strip()))
+ 
+ setuptools.setup(
