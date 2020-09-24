@@ -1,7 +1,7 @@
 channels:
 - conda-forge
 dependencies:
-- damask =3.0.0=py36hcef5778_2
+- damask =3.0.0=py38hd843874_2
 - vtk
 - itkwidgets
 - pyvista
