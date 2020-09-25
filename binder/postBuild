@@ -1,8 +1,23 @@
 #!/bin/bash
+
+# clone latest development version of DAMASK 
 git clone https://github.com/eisenforschung/DAMASK.git
 cd DAMASK 
 git checkout -b development
 patch -p1 < ../binder/python.patch
+
+# update python wrapper to latest development version 
 cd python
 cp ../VERSION .
 pip install . 
+cd ..
+
+# update processing to the latest development version 
+for f in $(ls processing/pre/*); do
+     n=$(basename $f)
+     cp -r $f ${NB_PYTHON_PREFIX}/bin/${n%.*};
+ done
+ for f in $(ls processing/post/*); do
+     n=$(basename $f)
+     cp -r $f ${NB_PYTHON_PREFIX}/bin/${n%.*};
+ done
