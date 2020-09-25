@@ -15,9 +15,9 @@ cd ..
 # update processing to the latest development version 
 for f in $(ls processing/pre/*); do
      n=$(basename $f)
-     cp -r $f ${CONDA_DIR}/bin/${n%.*};
+     cp -r $f ${CONDA_PREFIX}/bin/${n%.*};
  done
  for f in $(ls processing/post/*); do
      n=$(basename $f)
-     cp -r $f ${CONDA_DIR}/bin/${n%.*};
+     cp -r $f ${CONDA_PREFIX}/bin/${n%.*};
  done
