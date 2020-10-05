@@ -1,0 +1,2 @@
+fdot 1.0e-3 0 0  0 * 0   0 0 *  stress  * * *   * 0 *   * * 0  time 10  incs 40 freq 1 restart 39 
+fdot 1.0e-3 0 0  0 * 0   0 0 *  stress  * * *   * 0 *   * * 0  time 10  incs 40 freq 1 restart 39 
