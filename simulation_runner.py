@@ -33,10 +33,11 @@ class simulation():
           Name of the load file
         """
         cmd = f'DAMASK_grid -l {load} -g {geom}'
-        p = subprocess.Popen(cmd,shell=True)
-        while p.poll() == None:
-            p.poll()
-        return p.poll()
+        #subprocess.run(cmd,shell=True)
+        subprocess.Popen(cmd,shell=True)
+#        while p.poll() == None:
+#            p.poll()
+#        return p.poll()
 
 
 # In[ ]:
