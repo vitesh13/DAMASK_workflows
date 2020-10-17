@@ -3,7 +3,8 @@
 # clone latest development version of DAMASK 
 git clone https://github.com/eisenforschung/DAMASK.git
 cd DAMASK 
-git checkout -b development
+# git checkout -b development
+git checkout 264fab44
 patch -p1 < ../binder/python.patch
 
 # update python wrapper to latest development version 
